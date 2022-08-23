@@ -22,6 +22,10 @@ class CurrenciesViewController: UIViewController,Storyboarded {
         setupUI()
         setupBindings()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.logCurrencyPageAnalytics()
+    }
     func setupBindings() {
         // Native binding
         viewModel.reloadTableViewClosure = { [weak self] () in
@@ -60,5 +64,10 @@ extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfCells
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = viewModel.getCurrencyData(at: indexPath)
+        coordinator?.gotToChart(title: "\(data.symbol)/USDT", symbol: "\(data.symbol)USDT", interval: data.interval, limit: data.limit)
+       
     }
 }

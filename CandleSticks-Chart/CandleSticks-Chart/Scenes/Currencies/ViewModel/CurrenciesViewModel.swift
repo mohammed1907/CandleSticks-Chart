@@ -29,4 +29,10 @@ class CurrenciesViewModel {
     func getCellViewModel( at indexPath: IndexPath ) -> CurrencyCellViewModel {
         return cellViewModels[indexPath.row]
     }
+    func getCurrencyData( at indexPath: IndexPath ) -> CurrencyModel {
+        return currencies[indexPath.row]
+    }
+    func logCurrencyPageAnalytics(){
+        LogEventByFBAnalytics(name: "IOS: Currency Screen", contentType: "IOS: Currency Screen Opened")
+    }
 }

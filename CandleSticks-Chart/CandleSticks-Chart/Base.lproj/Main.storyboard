@@ -61,6 +61,7 @@
                             <constraint firstItem="3LM-Z3-3Kf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="Q6G-zM-eh5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vaq-tG-7WI" secondAttribute="trailing" constant="28" id="Tvg-3w-vcw"/>
                             <constraint firstItem="Vaq-tG-7WI" firstAttribute="top" secondItem="3LM-Z3-3Kf" secondAttribute="bottom" constant="24" id="Yfw-fL-ETG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3LM-Z3-3Kf" secondAttribute="trailing" symbolic="YES" id="jf9-4W-nii"/>
                             <constraint firstItem="Vaq-tG-7WI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="oy1-zf-Y1U"/>
                         </constraints>
                     </view>
@@ -72,5 +73,69 @@
             </objects>
             <point key="canvasLocation" x="20" y="62"/>
         </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="Nkx-nZ-TuW">
+            <objects>
+                <viewController storyboardIdentifier="ChartViewController" id="fgm-dP-Dks" customClass="ChartViewController" customModule="CandleSticks_Chart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="13S-w0-GlG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-VR-YIc">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-qd-aKH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4V-zq-CP9">
+                                <rect key="frame" x="30" y="68" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="V77-6d-Req"/>
+                                    <constraint firstAttribute="width" constant="24" id="sUV-p3-8vE"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.left"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="fgm-dP-Dks" eventType="touchUpInside" id="cpN-0f-wxi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJs-KL-61h">
+                                <rect key="frame" x="70" y="60" width="132.5" height="40"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IuG-NX-MTG"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fJs-KL-61h" firstAttribute="centerY" secondItem="v4V-zq-CP9" secondAttribute="centerY" id="00s-wt-TS3"/>
+                            <constraint firstItem="v4V-zq-CP9" firstAttribute="leading" secondItem="IuG-NX-MTG" secondAttribute="leading" constant="30" id="2ao-6Z-kWJ"/>
+                            <constraint firstItem="aYP-VR-YIc" firstAttribute="centerX" secondItem="13S-w0-GlG" secondAttribute="centerX" id="4Bv-Xe-4Q2"/>
+                            <constraint firstItem="aYP-VR-YIc" firstAttribute="centerY" secondItem="13S-w0-GlG" secondAttribute="centerY" id="9As-Em-06l"/>
+                            <constraint firstItem="ML9-qd-aKH" firstAttribute="leading" secondItem="IuG-NX-MTG" secondAttribute="leading" id="AjD-Cm-5dE"/>
+                            <constraint firstItem="IuG-NX-MTG" firstAttribute="trailing" secondItem="ML9-qd-aKH" secondAttribute="trailing" id="Cj7-fE-u62"/>
+                            <constraint firstItem="IuG-NX-MTG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fJs-KL-61h" secondAttribute="trailing" symbolic="YES" id="GMz-sZ-gBl"/>
+                            <constraint firstItem="IuG-NX-MTG" firstAttribute="bottom" secondItem="ML9-qd-aKH" secondAttribute="bottom" id="T5O-5m-WEo"/>
+                            <constraint firstItem="fJs-KL-61h" firstAttribute="leading" secondItem="v4V-zq-CP9" secondAttribute="trailing" constant="16" id="TJY-Xc-tjG"/>
+                            <constraint firstItem="v4V-zq-CP9" firstAttribute="top" secondItem="IuG-NX-MTG" secondAttribute="top" constant="24" id="WOy-Ae-PAM"/>
+                            <constraint firstItem="ML9-qd-aKH" firstAttribute="top" secondItem="IuG-NX-MTG" secondAttribute="top" id="Zcv-0I-gew"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="aYP-VR-YIc" id="5XY-C9-Wmt"/>
+                        <outlet property="chartTitle" destination="fJs-KL-61h" id="v4M-5A-tsr"/>
+                        <outlet property="containerView" destination="ML9-qd-aKH" id="NwS-n2-fdO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O20-p7-Hot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="60"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="chevron.left" width="11.5" height="20"/>
+    </resources>
 </document>

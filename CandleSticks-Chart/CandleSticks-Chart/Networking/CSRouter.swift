@@ -29,8 +29,11 @@ enum CSRouter {
 
     var parameters: [String: Any]? {
         switch self {
+        case .getSticksLines(let symbol, let interval, let limit):
+            let parameters = ["symbol":symbol,"interval": interval,"limit":limit] as [String : Any]
+            return parameters
         default:
-            return nil
+         return nil
 
         }
     }
@@ -43,6 +46,7 @@ enum CSRouter {
         components?.queryItems = []
         urlRequest.httpMethod = method.rawValue
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        
             components?.queryItems?.append(contentsOf: parameters!.map { (key, value) in
                 URLQueryItem(name: key, value: value as? String)
             })

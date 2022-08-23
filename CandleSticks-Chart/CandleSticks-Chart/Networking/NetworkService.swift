@@ -18,10 +18,9 @@ class NetworkService: NetworkServiceProtocol {
         do {
             let urlRequest = try route.asURLRequest()
             URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+   
+                
                 DispatchQueue.main.async {
-                    if let data = data, let utf8Text = String(data: data, encoding: .utf8) {
-                        print("Data: \(utf8Text)")
-                    }
                     if let httpResponse = response as? HTTPURLResponse,
                        !(200 ... 299).contains(httpResponse.statusCode) {
                     let txtError = self.handleError(forCode: httpResponse.statusCode)
@@ -33,8 +32,22 @@ class NetworkService: NetworkServiceProtocol {
                         return
                     }
                     do {
-                        let reviews = try JSONDecoder().decode(T.self, from: data)
-                        completion(.success(reviews))
+                        if let utf8Text = String(data: data, encoding: .utf8) {
+                            var candleDataViewModel: [ChartModel] = [ChartModel]()
+                            let arrayData = utf8Text.replacingOccurrences(of: "],[", with: "]  [").dropFirst().dropLast().replacingOccurrences(of: "\\", with: "").replacingOccurrences(of: "\"", with: "").components(separatedBy: "  ")
+                            print("Data: \(arrayData)")
+                            for i in 0...arrayData.count - 1 {
+                               let newArr = arrayData[i].replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "").components(separatedBy: ",")
+                                candleDataViewModel.append(ChartModel(openTime: Int(newArr[0])!, open: String(newArr[1]), high: String(newArr[2]), low: String(newArr[3]), volume: String(newArr[4]), close: String(newArr[5]), closeTime: Int(newArr[6])!, qAssetVolume: String(newArr[7]), numberoftrades: Int(newArr[8])!, tbBAssetVolume: String(newArr[9]), tbQAssetVolume: String(newArr[10]), ignoreVal: String(newArr[11])))
+                            }
+                            let val = candleDataViewModel.compactMap({$0.dict})
+                            print("val: \(val)")
+                            let jsonData = try JSONSerialization.data(withJSONObject: val, options: [])
+                                let reviews = try JSONDecoder().decode(T.self, from: jsonData)
+                                completion(.success(reviews))
+
+                        }
+                      
                     } catch {
                         print("Error: \(error)")
                         completion(.failure(.parsingError))

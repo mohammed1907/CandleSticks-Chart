@@ -2,7 +2,7 @@
 //  State.swift
 //  CandleSticks-Chart
 //
-//  Created by Omar Hassanein on 22/08/2022.
+//  Created by Mohamed farghaly on 22/08/2022.
 //
 
 import Foundation

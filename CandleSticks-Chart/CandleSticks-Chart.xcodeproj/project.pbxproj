@@ -13,7 +13,6 @@
 		0605DFBE28B11753008DF4F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0605DFBC28B11753008DF4F8 /* Main.storyboard */; };
 		0605DFC028B11754008DF4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0605DFBF28B11754008DF4F8 /* Assets.xcassets */; };
 		0605DFC328B11754008DF4F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0605DFC128B11754008DF4F8 /* LaunchScreen.storyboard */; };
-		0605DFCE28B11754008DF4F8 /* CandleSticks_ChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605DFCD28B11754008DF4F8 /* CandleSticks_ChartTests.swift */; };
 		0605DFEC28B123C9008DF4F8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605DFEB28B123C9008DF4F8 /* Config.swift */; };
 		0605DFEE28B1262E008DF4F8 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605DFED28B1262E008DF4F8 /* HTTPMethod.swift */; };
 		0605DFF028B126AC008DF4F8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605DFEF28B126AC008DF4F8 /* NetworkError.swift */; };
@@ -32,24 +31,21 @@
 		0605E01628B16E08008DF4F8 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0605E01428B16DE6008DF4F8 /* Roboto-Medium.ttf */; };
 		0605E01728B16E08008DF4F8 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0605E01528B16DEB008DF4F8 /* Roboto-Regular.ttf */; };
 		063532F228B56CC8006FE2A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 063532F128B56CC8006FE2A9 /* GoogleService-Info.plist */; };
+		063D05A528B64E9100801ECD /* ApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D05A428B64E9100801ECD /* ApiServiceMock.swift */; };
+		063D05A728B64F0600801ECD /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D05A628B64F0600801ECD /* ApiServiceTest.swift */; };
+		063D05A928B651C500801ECD /* ChartViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D05A828B651C500801ECD /* ChartViewModelTest.swift */; };
 		065D526F28B2591A00D7BEC6 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D526E28B2591A00D7BEC6 /* ChartViewController.swift */; };
 		065D527328B26C7900D7BEC6 /* UIViewcontroller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527228B26C7900D7BEC6 /* UIViewcontroller+Extension.swift */; };
 		065D527628B29FDC00D7BEC6 /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527528B29FDC00D7BEC6 /* ChartService.swift */; };
 		065D527828B2A50C00D7BEC6 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527728B2A50C00D7BEC6 /* ChartModel.swift */; };
 		065D527A28B37F7500D7BEC6 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527928B37F7500D7BEC6 /* ChartViewModel.swift */; };
 		065D527C28B3804100D7BEC6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527B28B3804100D7BEC6 /* State.swift */; };
+		3003A0FD63FF7DDAEA231F30 /* Pods_CandleSticks_ChartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF43164B2C49EB3D2BEE31DB /* Pods_CandleSticks_ChartTests.framework */; };
 		E0C310A749D6B27BDE1D8DE8 /* Pods_CandleSticks_Chart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB19CBCFB08DCB8E697AA938 /* Pods_CandleSticks_Chart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0605DFCA28B11754008DF4F8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0605DFAB28B11753008DF4F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0605DFB228B11753008DF4F8;
-			remoteInfo = "CandleSticks-Chart";
-		};
-		0605DFD428B11754008DF4F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0605DFAB28B11753008DF4F8 /* Project object */;
 			proxyType = 1;
@@ -68,8 +64,6 @@
 		0605DFC228B11754008DF4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0605DFC428B11754008DF4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0605DFC928B11754008DF4F8 /* CandleSticks-ChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CandleSticks-ChartTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0605DFCD28B11754008DF4F8 /* CandleSticks_ChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleSticks_ChartTests.swift; sourceTree = "<group>"; };
-		0605DFD328B11754008DF4F8 /* CandleSticks-ChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CandleSticks-ChartUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605DFEB28B123C9008DF4F8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		0605DFED28B1262E008DF4F8 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		0605DFEF28B126AC008DF4F8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -88,13 +82,19 @@
 		0605E01428B16DE6008DF4F8 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		0605E01528B16DEB008DF4F8 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		063532F128B56CC8006FE2A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		063D05A428B64E9100801ECD /* ApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceMock.swift; sourceTree = "<group>"; };
+		063D05A628B64F0600801ECD /* ApiServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTest.swift; sourceTree = "<group>"; };
+		063D05A828B651C500801ECD /* ChartViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModelTest.swift; sourceTree = "<group>"; };
 		065D526E28B2591A00D7BEC6 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		065D527228B26C7900D7BEC6 /* UIViewcontroller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Extension.swift"; sourceTree = "<group>"; };
 		065D527528B29FDC00D7BEC6 /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
 		065D527728B2A50C00D7BEC6 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		065D527928B37F7500D7BEC6 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		065D527B28B3804100D7BEC6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		47F9E4EE1F634346977A8B2A /* Pods-CandleSticks-ChartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks-ChartTests.release.xcconfig"; path = "Target Support Files/Pods-CandleSticks-ChartTests/Pods-CandleSticks-ChartTests.release.xcconfig"; sourceTree = "<group>"; };
 		86129F3667212046E8BC1B5E /* Pods-CandleSticks-Chart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks-Chart.release.xcconfig"; path = "Target Support Files/Pods-CandleSticks-Chart/Pods-CandleSticks-Chart.release.xcconfig"; sourceTree = "<group>"; };
+		963C6E439F98DFF3C3E1F331 /* Pods-CandleSticks-ChartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks-ChartTests.debug.xcconfig"; path = "Target Support Files/Pods-CandleSticks-ChartTests/Pods-CandleSticks-ChartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF43164B2C49EB3D2BEE31DB /* Pods_CandleSticks_ChartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CandleSticks_ChartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C836EE900AC3AD027435E225 /* Pods-CandleSticks-Chart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks-Chart.debug.xcconfig"; path = "Target Support Files/Pods-CandleSticks-Chart/Pods-CandleSticks-Chart.debug.xcconfig"; sourceTree = "<group>"; };
 		FB19CBCFB08DCB8E697AA938 /* Pods_CandleSticks_Chart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CandleSticks_Chart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,13 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0605DFD028B11754008DF4F8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3003A0FD63FF7DDAEA231F30 /* Pods_CandleSticks_ChartTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +135,6 @@
 			children = (
 				0605DFB328B11753008DF4F8 /* CandleSticks-Chart.app */,
 				0605DFC928B11754008DF4F8 /* CandleSticks-ChartTests.xctest */,
-				0605DFD328B11754008DF4F8 /* CandleSticks-ChartUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,7 +160,9 @@
 		0605DFCC28B11754008DF4F8 /* CandleSticks-ChartTests */ = {
 			isa = PBXGroup;
 			children = (
-				0605DFCD28B11754008DF4F8 /* CandleSticks_ChartTests.swift */,
+				063D05A428B64E9100801ECD /* ApiServiceMock.swift */,
+				063D05A628B64F0600801ECD /* ApiServiceTest.swift */,
+				063D05A828B651C500801ECD /* ChartViewModelTest.swift */,
 			);
 			path = "CandleSticks-ChartTests";
 			sourceTree = "<group>";
@@ -333,6 +328,8 @@
 			children = (
 				C836EE900AC3AD027435E225 /* Pods-CandleSticks-Chart.debug.xcconfig */,
 				86129F3667212046E8BC1B5E /* Pods-CandleSticks-Chart.release.xcconfig */,
+				963C6E439F98DFF3C3E1F331 /* Pods-CandleSticks-ChartTests.debug.xcconfig */,
+				47F9E4EE1F634346977A8B2A /* Pods-CandleSticks-ChartTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -341,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				FB19CBCFB08DCB8E697AA938 /* Pods_CandleSticks_Chart.framework */,
+				BF43164B2C49EB3D2BEE31DB /* Pods_CandleSticks_ChartTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -372,9 +370,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0605DFE028B11754008DF4F8 /* Build configuration list for PBXNativeTarget "CandleSticks-ChartTests" */;
 			buildPhases = (
+				EFD6E390211378B6E3F343F1 /* [CP] Check Pods Manifest.lock */,
 				0605DFC528B11754008DF4F8 /* Sources */,
 				0605DFC628B11754008DF4F8 /* Frameworks */,
 				0605DFC728B11754008DF4F8 /* Resources */,
+				0FFEE87E79E734451AA1C14D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,24 +385,6 @@
 			productName = "CandleSticks-ChartTests";
 			productReference = 0605DFC928B11754008DF4F8 /* CandleSticks-ChartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0605DFD228B11754008DF4F8 /* CandleSticks-ChartUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0605DFE328B11754008DF4F8 /* Build configuration list for PBXNativeTarget "CandleSticks-ChartUITests" */;
-			buildPhases = (
-				0605DFCF28B11754008DF4F8 /* Sources */,
-				0605DFD028B11754008DF4F8 /* Frameworks */,
-				0605DFD128B11754008DF4F8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0605DFD528B11754008DF4F8 /* PBXTargetDependency */,
-			);
-			name = "CandleSticks-ChartUITests";
-			productName = "CandleSticks-ChartUITests";
-			productReference = 0605DFD328B11754008DF4F8 /* CandleSticks-ChartUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -418,10 +400,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					0605DFC828B11754008DF4F8 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 0605DFB228B11753008DF4F8;
-					};
-					0605DFD228B11754008DF4F8 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 0605DFB228B11753008DF4F8;
 					};
@@ -442,7 +420,6 @@
 			targets = (
 				0605DFB228B11753008DF4F8 /* CandleSticks-Chart */,
 				0605DFC828B11754008DF4F8 /* CandleSticks-ChartTests */,
-				0605DFD228B11754008DF4F8 /* CandleSticks-ChartUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -464,13 +441,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0605DFC728B11754008DF4F8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0605DFD128B11754008DF4F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,6 +491,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0FFEE87E79E734451AA1C14D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CandleSticks-ChartTests/Pods-CandleSticks-ChartTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CandleSticks-ChartTests/Pods-CandleSticks-ChartTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CandleSticks-ChartTests/Pods-CandleSticks-ChartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E9DF3C12BAADE7136838FB3B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,6 +523,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CandleSticks-Chart/Pods-CandleSticks-Chart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFD6E390211378B6E3F343F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CandleSticks-ChartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -574,14 +583,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0605DFCE28B11754008DF4F8 /* CandleSticks_ChartTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0605DFCF28B11754008DF4F8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				063D05A528B64E9100801ECD /* ApiServiceMock.swift in Sources */,
+				063D05A728B64F0600801ECD /* ApiServiceTest.swift in Sources */,
+				063D05A928B651C500801ECD /* ChartViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,11 +596,6 @@
 			isa = PBXTargetDependency;
 			target = 0605DFB228B11753008DF4F8 /* CandleSticks-Chart */;
 			targetProxy = 0605DFCA28B11754008DF4F8 /* PBXContainerItemProxy */;
-		};
-		0605DFD528B11754008DF4F8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0605DFB228B11753008DF4F8 /* CandleSticks-Chart */;
-			targetProxy = 0605DFD428B11754008DF4F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -795,6 +794,7 @@
 		};
 		0605DFE128B11754008DF4F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963C6E439F98DFF3C3E1F331 /* Pods-CandleSticks-ChartTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -815,6 +815,7 @@
 		};
 		0605DFE228B11754008DF4F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F9E4EE1F634346977A8B2A /* Pods-CandleSticks-ChartTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -830,42 +831,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CandleSticks-Chart.app/CandleSticks-Chart";
-			};
-			name = Release;
-		};
-		0605DFE428B11754008DF4F8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FXJ7GS8B9P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CandleSticks-Chart.CandleSticks-ChartUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CandleSticks-Chart";
-			};
-			name = Debug;
-		};
-		0605DFE528B11754008DF4F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FXJ7GS8B9P;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CandleSticks-Chart.CandleSticks-ChartUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CandleSticks-Chart";
 			};
 			name = Release;
 		};
@@ -895,15 +860,6 @@
 			buildConfigurations = (
 				0605DFE128B11754008DF4F8 /* Debug */,
 				0605DFE228B11754008DF4F8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0605DFE328B11754008DF4F8 /* Build configuration list for PBXNativeTarget "CandleSticks-ChartUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0605DFE428B11754008DF4F8 /* Debug */,
-				0605DFE528B11754008DF4F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

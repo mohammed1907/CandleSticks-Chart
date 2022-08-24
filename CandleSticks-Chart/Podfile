@@ -11,5 +11,8 @@ target 'CandleSticks-Chart' do
  pod 'Firebase'
  pod 'Firebase/Crashlytics'
  pod 'Firebase/Analytics'
-
+ target 'CandleSticks-ChartTests' do
+      inherit! :search_paths
+      pod 'Firebase'
+  end
 end

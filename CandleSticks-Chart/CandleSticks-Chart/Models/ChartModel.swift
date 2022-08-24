@@ -2,7 +2,7 @@
 //  ChartModel.swift
 //  CandleSticks-Chart
 //
-//  Created by Omar Hassanein on 21/08/2022.
+//  Created by Mohamed farghaly on 21/08/2022.
 //
 import Foundation
 

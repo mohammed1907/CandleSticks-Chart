@@ -14,7 +14,7 @@ class ChartViewController: UIViewController ,Storyboarded {
     var symbol: String?
     var interval: String?
     var limit: String?
-    
+
     @IBOutlet weak var chartTitle: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -22,16 +22,7 @@ class ChartViewController: UIViewController ,Storyboarded {
         return ChartViewModel()
     }()
     lazy var candleChartView: CandleStickChartView = {
-        let chartView = CandleStickChartView()
-        chartView.backgroundColor = UIColor(displayP3Red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
-        chartView.rightAxis.enabled = false
-        let yAxis = chartView.leftAxis
-        yAxis.labelFont = .boldSystemFont(ofSize: 12)
-        yAxis.setLabelCount(6, force: false)
-        yAxis.labelTextColor = .white
-        yAxis.axisLineColor = .white
-        yAxis.gridColor = .white
-        return chartView
+        return viewModel.setupChartView()
     }()
    
     override func viewDidLoad() {
@@ -50,8 +41,10 @@ class ChartViewController: UIViewController ,Storyboarded {
         let data = CandleChartData(dataSet: set1)
         data.setDrawValues(false)
         candleChartView.data = data
+        candleChartView.leftAxis.axisMaximum = viewModel.maxValue ?? 0.0
+        candleChartView.leftAxis.axisMinimum = viewModel.miniValue ?? 0.0
     }
-    
+  
     func initView() {
         chartTitle.text = chartStringTitle
         containerView.addSubview(candleChartView)

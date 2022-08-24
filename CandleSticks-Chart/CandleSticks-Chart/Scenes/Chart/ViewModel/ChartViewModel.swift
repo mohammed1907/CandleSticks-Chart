@@ -13,20 +13,24 @@ class ChartViewModel {
 
     var chartData: [ChartModel] = [ChartModel]() {
         didSet {
-            self.processFetchedProducts(chartData: chartData)
+            self.processFetchedValues(chartData: chartData)
         }
     }
     var yValues :[CandleChartDataEntry] = [CandleChartDataEntry]()
-      
-    private var candleDataViewModel: [CandelDataViewModel] = [CandelDataViewModel]() {
+    var miniValue: Double?
+    var maxValue: Double?
+    private var chartValues: [[String]] = [[String]]() {
         didSet {
-            for i in 0...candleDataViewModel.count - 1{
-                yValues.append(CandleChartDataEntry(x: Double(i), shadowH: Double(candleDataViewModel[i].high) ?? 0.0, shadowL: Double(candleDataViewModel[i].low) ?? 0.0, open: Double(candleDataViewModel[i].openTime) ?? 0.0, close: Double(candleDataViewModel[i].closeTime) ?? 0.0))
+            print("chart values ->>> ", chartValues)
+            maxValue = chartValues.max(by: {$0.first! < $1.first!})?.map{Double($0)!}.max()
+            miniValue = chartValues.min(by: {$0.first! < $1.first!})?.map{Double($0)!}.min()
+            for i in 0...chartValues.count - 1{
+                yValues.append(CandleChartDataEntry(x: Double(i), shadowH: Double(chartValues[i][0]) ?? 0.0, shadowL: Double(chartValues[i][1]) ?? 0.0, open: Double(chartValues[i][2]) ?? 0.0, close:Double(chartValues[i][3]) ?? 0.0))
+            
             }
             self.viewChartClosure?()
         }
     }
-
     // callback for interfaces
     var state: State = .empty {
         didSet {
@@ -54,7 +58,7 @@ class ChartViewModel {
             switch result {
             case .success(let data):
              self.chartData = data
-              self.state = .populated
+             self.state = .populated
             case .failure(let error):
                 self.state = .error
                 self.alertMessage = error.errorDescription
@@ -63,9 +67,36 @@ class ChartViewModel {
 
         }
     }
-    private func processFetchedProducts( chartData: [ChartModel] ) {
-        self.candleDataViewModel = chartData.compactMap { CandelDataViewModel(data: $0) }
-    
+    private func processFetchedValues(chartData: [ChartModel]?) {
+        guard let list = chartData else {
+            return
+        }
+        var chartValues: [[Any]] = []
+        list.forEach({ values in
+            chartValues.append(values.result)
+        })
+        
+        self.chartValues = chartValues.map{Array($0.filter{return $0 is String}.prefix(4))} as? [[String]] ?? [[]]
+        print("chart values ->>>",  self.chartValues)
+    }
+    func setupChartView() -> CandleStickChartView{
+        let chartView = CandleStickChartView()
+        chartView.backgroundColor = UIColor(displayP3Red: 49/255, green: 49/255, blue: 49/255, alpha: 1)
+        chartView.rightAxis.enabled = false
+        let leftAxis = chartView.leftAxis
+        leftAxis.labelFont = .boldSystemFont(ofSize: 12)
+        leftAxis.setLabelCount(6, force: false)
+        leftAxis.labelTextColor = .white
+        leftAxis.axisLineColor = .white
+        chartView.xAxis.labelTextColor = .white
+        chartView.xAxis.axisMinimum = 0.0
+        chartView.xAxis.axisMaximum = 90.0
+        let rightAxis = chartView.rightAxis
+        rightAxis.labelFont = .boldSystemFont(ofSize: 12)
+        rightAxis.setLabelCount(6, force: false)
+        rightAxis.labelTextColor = .white
+        rightAxis.axisLineColor = .white
+        return chartView
     }
     func logChartPageAnalytics(symbol: String){
         LogEventByFBAnalytics(name: "IOS: Chart Screen", contentType: "IOS: \(symbol) Chart Opened")

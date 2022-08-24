@@ -38,7 +38,6 @@
 		065D527828B2A50C00D7BEC6 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527728B2A50C00D7BEC6 /* ChartModel.swift */; };
 		065D527A28B37F7500D7BEC6 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527928B37F7500D7BEC6 /* ChartViewModel.swift */; };
 		065D527C28B3804100D7BEC6 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527B28B3804100D7BEC6 /* State.swift */; };
-		065D527E28B3826C00D7BEC6 /* CandelDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D527D28B3826C00D7BEC6 /* CandelDataViewModel.swift */; };
 		E0C310A749D6B27BDE1D8DE8 /* Pods_CandleSticks_Chart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB19CBCFB08DCB8E697AA938 /* Pods_CandleSticks_Chart.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +94,6 @@
 		065D527728B2A50C00D7BEC6 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		065D527928B37F7500D7BEC6 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		065D527B28B3804100D7BEC6 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		065D527D28B3826C00D7BEC6 /* CandelDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandelDataViewModel.swift; sourceTree = "<group>"; };
 		86129F3667212046E8BC1B5E /* Pods-CandleSticks-Chart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks-Chart.release.xcconfig"; path = "Target Support Files/Pods-CandleSticks-Chart/Pods-CandleSticks-Chart.release.xcconfig"; sourceTree = "<group>"; };
 		C836EE900AC3AD027435E225 /* Pods-CandleSticks-Chart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CandleSticks-Chart.debug.xcconfig"; path = "Target Support Files/Pods-CandleSticks-Chart/Pods-CandleSticks-Chart.debug.xcconfig"; sourceTree = "<group>"; };
 		FB19CBCFB08DCB8E697AA938 /* Pods_CandleSticks_Chart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CandleSticks_Chart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,7 +316,6 @@
 			children = (
 				065D527928B37F7500D7BEC6 /* ChartViewModel.swift */,
 				065D527B28B3804100D7BEC6 /* State.swift */,
-				065D527D28B3826C00D7BEC6 /* CandelDataViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -360,6 +357,7 @@
 				0605DFB028B11753008DF4F8 /* Frameworks */,
 				0605DFB128B11753008DF4F8 /* Resources */,
 				E9DF3C12BAADE7136838FB3B /* [CP] Embed Pods Frameworks */,
+				063D05A328B643DE00801ECD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -482,6 +480,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		063D05A328B643DE00801ECD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		0A11E4871515F3BEA9E10789 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,7 +561,6 @@
 				0605DFB928B11753008DF4F8 /* SceneDelegate.swift in Sources */,
 				0605E00528B15376008DF4F8 /* UIView+Borders.swift in Sources */,
 				065D527628B29FDC00D7BEC6 /* ChartService.swift in Sources */,
-				065D527E28B3826C00D7BEC6 /* CandelDataViewModel.swift in Sources */,
 				065D527828B2A50C00D7BEC6 /* ChartModel.swift in Sources */,
 				0605DFF828B135D5008DF4F8 /* Storyboarded.swift in Sources */,
 				0605E00728B15691008DF4F8 /* CurrenciesViewModel.swift in Sources */,
@@ -726,6 +742,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = FXJ7GS8B9P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CandleSticks-Chart/Info.plist";
